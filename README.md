@@ -1,125 +1,112 @@
 <div align="center">
 
-# 💎 Maison Copy
+# 💎 Maison Copy — Luxury AI Description Atelier
 
-### *Luxury AI Description Atelier*
+### *Where generative intelligence learns the grammar of heritage.*
 
-**Where generative AI learns the language of heritage.**
+Structured agent reasoning, a quiet-luxury editorial rulebook, and five bespoke brand registers, composed into one atelier for the world's most exacting product copy.
 
-![Python](https://img.shields.io/badge/Python-3.10%2B-1f1f1f?style=flat-square&logo=python&logoColor=b79a62)
-![Streamlit](https://img.shields.io/badge/Streamlit-Web%20App-1f1f1f?style=flat-square&logo=streamlit&logoColor=b79a62)
-![LLM](https://img.shields.io/badge/LLM-Prompt%20Engineered-1f1f1f?style=flat-square&logoColor=b79a62)
-![Status](https://img.shields.io/badge/Status-Demo%20Ready-b79a62?style=flat-square)
+![Python](https://img.shields.io/badge/Python-3.11%2B-1f1f1f?style=flat-square&logo=python&logoColor=b79a62)
+![Streamlit](https://img.shields.io/badge/Streamlit-Interface-1f1f1f?style=flat-square&logo=streamlit&logoColor=b79a62)
+![Gemini](https://img.shields.io/badge/Google%20Gemini-GenAI%20SDK-1f1f1f?style=flat-square&logo=googlegemini&logoColor=b79a62)
+![Environment](https://img.shields.io/badge/Environment-venv%20isolated-b79a62?style=flat-square)
 
-[The Problem](#the-problem) · [The Solution](#the-solution) · [Architecture](#core-architecture--workflow) · [Stack](#technical-stack) · [Getting Started](#getting-started) · [Roadmap](#future-roadmap)
+[The Bottleneck](#the-bottleneck) · [The Architecture](#the-architecture) · [Security](#built-for-commercial-use) · [Tech Stack](#production-tech-stack) · [Installation](#installation) · [Registers](#available-registers)
 
 </div>
 
-<!-- Add a short screen recording here: ![Maison Copy demo](docs/demo.gif) -->
+<!-- Add a screen recording: ![Maison Copy in action](docs/demo.gif) -->
 
 ---
 
-## The Problem
+## The Bottleneck
 
-Luxury is built on restraint. Generic AI writing is built on volume.
+Luxury is a discipline of restraint. General-purpose language models are engines of abundance.
 
-Ask a general-purpose chatbot to describe a heritage timepiece or a hand-stitched leather bag, and the result is usually recognisable within a sentence: an exclamation mark, a "stunning," a "must-have," an invitation to "elevate your style." For a mass-market product, that is merely forgettable. For a maison, it is damaging.
+Hand a raw LLM a heritage timepiece or a hand-stitched leather bag, and it reaches for the same worn vocabulary: *luxurious*, *elegant*, *stunning*, *timeless*, *elevate*. The sentences arrive at a uniform pace, the structure is a feature list in disguise, and the brand's history is either ignored or, worse, invented.
 
-Raw, unguided AI tools fail the luxury segment in four consistent ways:
+For a mass-market listing, that is forgettable. For a maison, it is a liability.
 
-| Failure mode | What it looks like | Why it matters to a maison |
+| Where raw LLMs fail | What it looks like | What luxury demands |
 |---|---|---|
-| **Cliché and hype** | "Amazing," "perfect," "game-changing," "unique" | Luxury whispers; it never shouts. |
-| **Generic register** | Interchangeable copy that could describe any product from any brand | Brand identity is the product. |
-| **Feature listing** | Specifications strung together instead of an evocation of ownership | Clients buy a feeling and a story, not a bullet list. |
-| **Invented facts** | Fabricated materials, dates, awards or heritage claims | One false claim erodes decades of credibility. |
+| **Cheap clichés** | Stock adjectives and exclamation marks | Quiet luxury: confidence without volume |
+| **No narrative rhythm** | Flat, uniform sentences | Cadence that moves between the short and the flowing |
+| **No sense of heritage** | Generic copy that fits any brand | A distinct register for each house |
+| **Fabricated facts** | Invented materials, dates and awards | Absolute fidelity to the supplied brief |
 
-Brand teams end up rewriting AI output line by line, which erases most of the time the tool was meant to save.
-
----
-
-## The Solution
-
-**Maison Copy** is a focused writing atelier for premium brands. Instead of asking a general model to "write a product description," it constrains the model with a structured, brand-grade creative brief and a strict editorial rulebook, so the output arrives in the right register from the first draft.
-
-**Value proposition**
-
-- **Elite brand register by default.** Understated, sensory, craftsmanship-led prose in the tradition of the great heritage houses.
-- **Fact-bound writing.** The model is instructed to use only the details you supply. No invented materials, certifications, dates or specifications.
-- **A banned vocabulary.** Hype words, clichés, exclamation marks, emoji and hashtags are excluded at the prompt level.
-- **Hours back for marketing teams.** A client-ready first draft in seconds, so editors refine instead of rewrite.
-- **Controlled output.** Choose the tone (timeless, romantic, architectural, heritage) and the length (concise, standard, extended) per product.
-- **Minimalist, brand-appropriate interface.** A quiet, typographic UI that fits the world it serves.
-
-**The difference, illustratively**
-
-> **Generic AI:** *"Introducing our stunning, must-have leather bag! Elevate your style with this amazing, timeless piece!"*
->
-> **Maison Copy:** *"Cut from full-grain Italian calfskin, the Aurèle Classique is a study in quiet restraint. Its silhouette is soft but certain: structured at the base, yielding at the shoulder, finished with edges burnished to a deep, glowing sheen."*
-
-*(Example shown for a fictional house.)*
+Marketing teams end up rewriting AI output line by line, which erases the time the tool was meant to save.
 
 ---
 
-## Core Architecture & Workflow
+## The Architecture
 
-Maison Copy is designed around a four-stage creative pipeline that mirrors how a senior copywriter actually works.
+Maison Copy replaces the single "write me a description" prompt with a **structured, multi-step agent workflow**. Each stage is a separate, live model call that hands a verified artefact to the next, the way a creative studio actually works.
 
 ```
- Product brief          ┌───────────────┐   ┌───────────────┐   ┌───────────────┐   ┌───────────────┐
- (name, materials, ───▶ │ 1. Analyse    │──▶│ 2. Study      │──▶│ 3. Draft      │──▶│ 4. Refine     │──▶ Final copy
-  details, tone,        │ product       │   │ brand voice & │   │ in the maison │   │ language &    │
-  length)               │ details       │   │ heritage      │   │ register      │   │ rhythm        │
-                        └───────────────┘   └───────────────┘   └───────────────┘   └───────────────┘
+                ┌────────────────────┐   ┌────────────────────┐   ┌────────────────────┐   ┌────────────────────┐
+ Product brief  │ 1. Deep Asset      │   │ 2. Maison Registry │   │ 3. High-End        │   │ 4. Linguistic      │
+ + register  ─▶ │    Analysis        │─▶ │    Mapping         │─▶ │    Narrative       │─▶ │    Polish & Rhythm │─▶ Final copy
+ + length       │                    │   │                    │   │    Drafting        │   │                    │
+                └────────────────────┘   └────────────────────┘   └────────────────────┘   └────────────────────┘
 ```
 
-| Stage | Purpose |
+| Stage | What happens |
 |---|---|
-| **1. Analysing product details** | Extract the verifiable facts from the brief: materials, construction, proportions, signature elements. These form the only permitted source material. |
-| **2. Studying brand voice & heritage** | Apply the target tone and the editorial voice of a heritage house: understated, sensory, timeless. |
-| **3. Drafting in the maison register** | Compose flowing prose that evokes the moment of ownership rather than listing features. |
-| **4. Refining language & rhythm** | Polish cadence and word choice, mixing short, rhythmic sentences with longer, flowing ones, and remove anything that breaks the register. |
+| **1. Deep Asset Analysis** | The brief is dissected into verified facts and signature elements. Claims the brief does not support are flagged as off-limits before a single sentence is written. |
+| **2. Maison Registry Mapping** | The chosen register is translated into a voice direction: tone, sensory imagery, rhythm, and the words that would cheapen this particular piece. |
+| **3. High-End Narrative Drafting** | An elite copywriter system prompt composes the draft inside the verified facts and the mapped register. |
+| **4. Linguistic Polish & Rhythm** | The draft is refined for cadence and word choice, stripped of clichés and unsupported claims, and streamed live into the final result. |
+
+Every stage is visible in the interface as it runs, so the reasoning is observable rather than hidden behind a spinner.
+
+**Editorial guardrails, enforced at the prompt level**
+
+- **Fact-bound.** Only the details you supply are used. No invented materials, dates, awards or specifications.
+- **Banned vocabulary.** Hype words, exclamation marks, emoji and hashtags are excluded by rule.
+- **No imitation.** The system describes a register; it never copies a real brand's voice or slogans.
+- **Prose only.** No bullet points, no headings: refined, flowing language.
+
+---
+
+## Built for Commercial Use
+
+Maison Copy is engineered with a commercial deployment in mind. Credential handling is secure by default, and the architecture separates the interface from the intelligence layer.
+
+- **Local `.env` key management.** The Gemini API key is read from a local `.env` file. A `.env.example` template is included, and `.env` is git-ignored so credentials never reach version control.
+- **Bring your own key.** Each client or team member can plug in their own Gemini API key, either in `.env` or in the sidebar for a single session.
+- **Keys stay out of the browser and off disk.** A saved key is shown masked and is never sent to the client. A key typed into the sidebar is held for the session only and is never written to disk. The key is also excluded from logs and tracebacks.
+- **Clean separation of concerns.** The API layer (`llm_client.py`) has no UI dependency and exposes validated, immutable configuration, retries with backoff on transient failures, and one typed error with user-safe messages. It is ready to be placed behind a service interface.
+- **Safe rendering.** Generated text is rendered as Markdown, never as raw HTML.
+
+> **Data handling note.** Product briefs are sent to the Gemini API for generation. Before processing confidential or unreleased product information, review Google's data-use terms for your API tier.
+
+---
+
+## Production Tech Stack
+
+| Layer | Technology |
+|---|---|
+| **Core** | Python 3.11+ |
+| **Interface** | Streamlit, custom-styled with minimalist typography and signature gold hairline accents |
+| **LLM orchestration** | Google GenAI SDK (`google-genai`) with Gemini models, configurable via `GEMINI_MODEL` |
+| **Configuration** | `python-dotenv` for local secrets |
+| **Environment** | Fully isolated virtual environment (`venv`), with dependencies tracked in `requirements.txt` |
 
 ### Project structure
 
 ```
 maison-copy/
-├── app.py          # Streamlit interface, system prompt, prompt assembly, demo mode
-├── llm_client.py   # Modular API layer: config, client creation, error handling
+├── app.py              # Streamlit interface, editorial prompts, four-stage agent pipeline
+├── llm_client.py       # Gemini API layer: config, client, retries, error handling
+├── requirements.txt    # Tracked dependencies
+├── .env.example        # Configuration template
+├── .gitignore          # Keeps secrets out of version control
 └── README.md
 ```
 
-### Design principles
-
-- **Separation of concerns.** The API layer (`llm_client.py`) has no UI dependencies, so it is independently testable and reusable.
-- **Immutable, validated configuration.** Settings are validated at construction, and secrets are read from the environment, never hardcoded.
-- **One exception type for the UI.** All provider errors (authentication, rate limits, timeouts, connectivity) are translated into user-safe messages.
-- **Safe rendering.** Generated text is rendered as Markdown, never as raw HTML.
-
-### Current implementation status
-
-> Transparency matters to us, so here is exactly where the project stands.
->
-> - **Demo mode (default)** runs with no API key. It simulates the four-stage workflow in the interface and returns pre-written showcase descriptions.
-> - **Live mode** sends the structured brief and system prompt to an LLM in a single, tightly constrained generation call.
-> - **Promoting each stage to its own chained model call**, with structured intermediate outputs, is the next architectural milestone (see the [Roadmap](#future-roadmap)).
-
 ---
 
-## Technical Stack
-
-| Layer | Technology |
-|---|---|
-| **Language** | Python 3.10+ |
-| **Interface** | [Streamlit](https://streamlit.io) with custom CSS (serif display typography, hairline gold accents) |
-| **LLM integration** | Anthropic Python SDK with built-in retries, timeouts and typed error handling |
-| **Core technique** | Structured prompt engineering: a role-defined system prompt, explicit voice guidelines, a negative vocabulary, fact-grounding constraints and parameterised user briefs |
-
----
-
-## Getting Started
-
-**Prerequisites:** Python 3.10 or newer.
+## Installation
 
 **1. Clone the repository**
 
@@ -128,57 +115,68 @@ git clone https://github.com/<your-username>/maison-copy.git
 cd maison-copy
 ```
 
-**2. Create a virtual environment (recommended)**
+**2. Create and activate a virtual environment**
 
 ```bash
 python -m venv .venv
-source .venv/bin/activate        # Windows: .venv\Scripts\activate
+
+# macOS / Linux
+source .venv/bin/activate
+
+# Windows (PowerShell)
+.venv\Scripts\Activate.ps1
 ```
 
 **3. Install dependencies**
 
 ```bash
-pip install streamlit anthropic
+pip install -r requirements.txt
 ```
 
-**4. Run the atelier**
+**4. Add your API key**
+
+Create a `.env` file in the project root (you can copy `.env.example`) and paste your key. Get a free key from [Google AI Studio](https://aistudio.google.com/apikey).
+
+```
+GEMINI_API_KEY=your_key
+```
+
+**5. Launch the atelier**
 
 ```bash
-streamlit run app.py
+python -m streamlit run app.py
 ```
 
-The app opens at `http://localhost:8501` in demo mode. No API key is required.
+The app opens at `http://localhost:8501`. With a saved key, you can compose immediately.
 
-### Enabling live generation
-
-```bash
-export ANTHROPIC_API_KEY="your-key-here"     # Windows (PowerShell): $env:ANTHROPIC_API_KEY="your-key-here"
-export DEMO_MODE=0                           # Windows (PowerShell): $env:DEMO_MODE="0"
-streamlit run app.py
-```
-
-Optionally set `ANTHROPIC_MODEL` to choose a specific model. Keys can also be stored in `.streamlit/secrets.toml`. Never commit API keys to version control.
+| Variable | Purpose | Required |
+|---|---|---|
+| `GEMINI_API_KEY` | Your Google Gemini API key | Yes (or paste it in the sidebar) |
+| `GEMINI_MODEL` | Override the Gemini model ID | No |
 
 ---
 
-## Future Roadmap
+## Available Registers
 
-- [ ] **True multi-step agent orchestration.** Promote each pipeline stage to an independent model call with typed intermediate outputs.
-- [ ] **Real-time multi-provider integrations**, including Google Gemini, behind a unified provider interface.
-- [ ] **AI product photography descriptions.** Upload an image and receive a brand-grade description grounded in what the model can actually see, using multimodal input.
-- [ ] **Brand voice profiles.** Save and reuse style guides, lexicons and exemplar copy per maison.
-- [ ] **Automated quality gates.** Validate banned vocabulary, word count and fact adherence, with automatic regeneration on failure.
-- [ ] **Multilingual and market-aware copy** for international luxury markets.
-- [ ] **Catalogue-scale batch generation** from CSV for entire collections.
+Five editorial registers, each with its own directive behind the scenes. Select the one that matches the house you write for.
 
----
-
-## About
-
-Maison Copy is an independent project by **[Your Name]**, exploring where generative AI and luxury brand identity meet.
-
-Feedback, ideas and collaboration are welcome. Open an issue or reach out via [LinkedIn](https://www.linkedin.com/in/your-profile).
+| Register | Character | Best suited to |
+|---|---|---|
+| **Heritage & Authoritative** | The calm, assured voice of a house with a long history. Measured, formal and declarative, with themes of mastery and continuity. | Timeless, classic heritage brands |
+| **Timeless & Understated** | Quiet luxury. No emphasis and no display; materials, cut and proportion speak in plain, exact language. | Brands of subtle elegance and restraint |
+| **Romantic & Evocative** | Sensory and emotional. Light, scent, memory and anticipation, in flowing, lyrical sentences. | Fine fragrance, high jewellery, hospitality |
+| **Modern & Architectural** | Precise and structural. Design described as architecture: geometry, line, proportion and surface. | High horology and design-led objects |
+| **Avant-Garde & High-Performance** | Bold, charged and commanding, with kinetic energy built on precision, never hype. Percussive sentences, the vocabulary of motion and engineering, and strict bans on invented performance figures and superlatives. | Elite supercars such as the Lamborghini Revuelto, and disruptive luxury fashion |
 
 ---
 
-<sub>Maison Copy is an independent project and is not affiliated with, endorsed by, or sponsored by any brand referenced as a stylistic benchmark. All trademarks are the property of their respective owners.</sub>
+<div align="center">
+
+**Maison Copy** is conceived and built by **Eugenia Khan**, Founder.
+A product at the meeting point of AI engineering and luxury brand craft.
+
+[LinkedIn] www.linkedin.com/in/eugenia-khan-ab5912390 · [GitHub] https://github.com/eugeniakhan
+
+</div>
+
+<sub>Maison Copy is an independent project and is not affiliated with, endorsed by, or sponsored by any brand or product named as an illustration. All trademarks belong to their respective owners.</sub>
